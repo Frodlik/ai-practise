@@ -20,7 +20,7 @@ weather-api:
 
 weather:
   cache:
-    validity-minutes: 5
+    validity-minutes: 30
 
 logging:
   level:

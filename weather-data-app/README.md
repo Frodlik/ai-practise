@@ -2,22 +2,6 @@
 
 A Spring Boot application that integrates with the OpenWeatherMap API to retrieve, cache, and manage weather data. The application supports both city names and ZIP codes for weather queries and provides automatic periodic data refresh using Spring Scheduler.
 
-## 📋 Table of Contents
-
-- [Features](#features)
-- [Technology Stack](#technology-stack)
-- [Architecture](#architecture)
-- [Prerequisites](#prerequisites)
-- [Installation & Setup](#installation--setup)
-- [Configuration](#configuration)
-- [Running the Application](#running-the-application)
-- [API Documentation](#api-documentation)
-- [Testing](#testing)
-- [Quality Assurance](#quality-assurance)
-- [Database Access](#database-access)
-- [Project Structure](#project-structure)
-- [Development Feedback](#development-feedback)
-
 ## 🚀 Features
 
 - **Weather Data Retrieval**: Search weather by city name or ZIP code
@@ -48,7 +32,7 @@ The application follows clean architecture principles with clear separation of c
 ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
 │   Controllers   │    │    Services     │    │  Repositories   │
 │                 │    │                 │    │                 │
-│ WeatherController│────│ WeatherService  │────│WeatherDataRepo  │
+│WeatherController│────│ WeatherService  │────│WeatherDataRepo  │
 │                 │    │ CacheService    │    │                 │
 └─────────────────┘    └─────────────────┘    └─────────────────┘
          │                       │                       │
