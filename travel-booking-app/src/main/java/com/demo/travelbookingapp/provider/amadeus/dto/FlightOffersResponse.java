@@ -21,7 +21,7 @@ public class FlightOffersResponse {
         private String id;
         private List<Itinerary> itineraries;
         private Price price;
-        private String validatingAirlineCodes;
+        private List<String> validatingAirlineCodes;
     }
 
     @Data

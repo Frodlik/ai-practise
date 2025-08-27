@@ -5,12 +5,12 @@ spring:
 amadeus:
   base-url: ${AMADEUS_BASE_URL:https://test.api.amadeus.com}
   client-id: ${AMADEUS_CLIENT_ID:}
-  client-secret: ${AMADEUS_CLIENT_SECRET:}
+  client-secret: ${AMADEUS_CLIENT_SECRET}
 
 car-api:
-  base-url: ${CAR_API_BASE_URL:}
-  key: ${CAR_API_KEY:}
-  host: ${CAR_API_HOST:}
+  base-url: ${CAR_API_BASE_URL:https://priceline-com-provider.p.rapidapi.com}
+  key: ${CAR_API_KEY}
+  host: ${CAR_API_HOST}
 
 management:
   endpoints:
