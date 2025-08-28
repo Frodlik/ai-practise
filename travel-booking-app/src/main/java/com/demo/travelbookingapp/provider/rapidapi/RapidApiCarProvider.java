@@ -74,8 +74,7 @@ public class RapidApiCarProvider implements CarProviderClient {
                     locationName
             );
 
-            log.info("Location search returned {} results",
-                    locations != null ? locations.size() : 0);
+            log.info("Location search returned {} results", locations != null ? locations.size() : 0);
 
             if (locations != null && !locations.isEmpty()) {
                 PricelineLocationResponse.Location location = locations.getFirst();
@@ -93,15 +92,12 @@ public class RapidApiCarProvider implements CarProviderClient {
     }
 
     private String[] formatDateTimeForPriceline(String isoDateTime) {
-        log.debug("Formatting datetime: {}", isoDateTime);
-
         try {
             LocalDateTime dateTime = getLocalDateTime(isoDateTime);
 
             String date = dateTime.format(DateTimeFormatter.ofPattern("MM/dd/yyyy"));
             String time = dateTime.format(DateTimeFormatter.ofPattern("HH:mm"));
 
-            log.debug("Formatted '{}' to date='{}' time='{}'", isoDateTime, date, time);
             return new String[]{date, time};
         } catch (DateTimeParseException e) {
             return new String[]{"09/01/2025", "10:00"};
@@ -123,6 +119,7 @@ public class RapidApiCarProvider implements CarProviderClient {
         } else {
             dateTime = LocalDateTime.parse(isoDateTime + "T10:00:00", DateTimeFormatter.ISO_LOCAL_DATE_TIME);
         }
+
         return dateTime;
     }
 
